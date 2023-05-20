@@ -20,8 +20,6 @@ public class Menu {
     OpcionMenu[] opciones = new OpcionMenu[5];
 
     public void agregarOpcion(OpcionMenu opcion) {}
-
     public void modificarOpcion(short idOpcion) {}
-
     public void eliminarOpcion(short idOpcion) {}
 }
