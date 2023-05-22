@@ -5,6 +5,11 @@ public class OpcionMenu {
     private String texto;
     private String color;
     
+    public OpcionMenu(short idOpcion, String texto, String color){
+	    this.idOpcion = idOpcion;
+	    this.texto = texto;
+        this.color = color;
+    }
     public String getTexto() {
         return texto;
     }
