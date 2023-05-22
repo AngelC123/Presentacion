@@ -1,9 +1,14 @@
 package presentacion;
 
 public class Menu {
+    private OpcionMenu[] opciones = new OpcionMenu[5];
     private String tituloMenu;
     private char disenoBorde;
 
+    public Menu(String tituloMenu, char disenoBorde){
+        this.tituloMenu = tituloMenu;
+        this.disenoBorde = disenoBorde;
+    }
     public String getTituloMenu() {
         return tituloMenu;
     }
@@ -16,9 +21,6 @@ public class Menu {
     public void setDisenoBorde(char disenoBorde) {
         this.disenoBorde = disenoBorde;
     }
-
-    OpcionMenu[] opciones = new OpcionMenu[5];
-
     public void agregarOpcion(OpcionMenu opcion) {}
     public void modificarOpcion(short idOpcion) {}
     public void eliminarOpcion(short idOpcion) {}
