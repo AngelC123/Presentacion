@@ -11,5 +11,15 @@ public class Main() {
 		menu.agregarOpcion(opcion2);
 		menu.agregarOpcion(opcion3);
 		menu.agregarOpcion(opcion4);
+        menu.agregarOpcion(opcion5);
+        menu.desplegar();
+
+        System.out.println();
+        menu.eliminarOpcion(opcion4);
+        menu.desplegar();
+
+        System.out.println();
+        menu.eliminarOpcion(opcion1);
+        menu.desplegar();
 	}
 }
