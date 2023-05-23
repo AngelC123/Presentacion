@@ -1,4 +1,5 @@
 package presentacion;
+import java.util.ArrayList;
 
 public class Menu {
     private ArrayList<OpcionMenu> opciones = new ArrayList<OpcionMenu>();
@@ -9,23 +10,50 @@ public class Menu {
         this.tituloMenu = tituloMenu;
         this.disenoBorde = disenoBorde;
     }
+
     public String getTituloMenu() {
         return tituloMenu;
     }
+
     public void setTituloMenu(String tituloMenu) {
         this.tituloMenu = tituloMenu;
     }
+
     public char getDisenoBorde() {
         return disenoBorde;
     }
+
     public void setDisenoBorde(char disenoBorde) {
         this.disenoBorde = disenoBorde;
     }
+
     public void agregarOpcion(OpcionMenu opcion) {
         opciones.add(opcion);
     }
+
     public void modificarOpcion(short idOpcion) {}
-    public void eliminarOpcion(short idOpcion) {
-        opciones.remove(opcion);
+
+    public void eliminarOpcion(OpcionMenu opcion) {
+		opciones.remove(opcion);
+    }
+
+    private String generarBorde(int longitud){
+    	StringBuilder borde = new StringBuilder();
+		for(int i=0; i<longitud; i++){
+			borde.append(disenoBorde);
+		}
+		return borde.toString();
+    }
+
+    public void desplegar(){
+		String bordeSuperior = generarBorde(10)+tituloMenu+generarBorde(10);
+		System.out.println(bordeSuperior);
+
+		for(OpcionMenu opcion : opciones){
+			System.out.println(opcion.getIdOpcion()+") -> "+opcion.getTexto());
+		}		
+
+		String bordeInferior = generarBorde(bordeSuperior.length());
+		System.out.println(bordeInferior);
     }
 }
