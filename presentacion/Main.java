@@ -1,4 +1,4 @@
-public class Main() {
+public class Main{
     public static void main(String[] args){
 		OpcionMenu opcion1 = new OpcionMenu((short)1, "Registrar", "ff0000");
 		OpcionMenu opcion2 = new OpcionMenu((short)2, "Imprimir", "ff0000");			
@@ -6,7 +6,7 @@ public class Main() {
 		OpcionMenu opcion4 = new OpcionMenu((short)4, "Graficas", "ff0000");
 		OpcionMenu opcion5 = new OpcionMenu((short)5, "Salir", "ff0000");
 
-		Menu menu = new Menu("Menu Principal",'#');
+		Menu menu = new Menu("Menu Principal",'-');
 		menu.agregarOpcion(opcion1);
 		menu.agregarOpcion(opcion2);
 		menu.agregarOpcion(opcion3);
