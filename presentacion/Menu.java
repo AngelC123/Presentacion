@@ -1,7 +1,7 @@
 package presentacion;
 
 public class Menu {
-    private OpcionMenu[] opciones = new OpcionMenu[5];
+    private ArrayList<OpcionMenu> opciones = new ArrayList<OpcionMenu>();
     private String tituloMenu;
     private char disenoBorde;
 
