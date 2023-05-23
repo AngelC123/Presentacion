@@ -5,7 +5,7 @@ public class Menu {
     private String tituloMenu;
     private char disenoBorde;
 
-    public Menu(String tituloMenu, char disenoBorde){
+    public Menu(String tituloMenu, char disenoBorde) {
         this.tituloMenu = tituloMenu;
         this.disenoBorde = disenoBorde;
     }
@@ -21,7 +21,11 @@ public class Menu {
     public void setDisenoBorde(char disenoBorde) {
         this.disenoBorde = disenoBorde;
     }
-    public void agregarOpcion(OpcionMenu opcion) {}
+    public void agregarOpcion(OpcionMenu opcion) {
+        opciones.add(opcion);
+    }
     public void modificarOpcion(short idOpcion) {}
-    public void eliminarOpcion(short idOpcion) {}
+    public void eliminarOpcion(short idOpcion) {
+        opciones.remove(opcion);
+    }
 }
