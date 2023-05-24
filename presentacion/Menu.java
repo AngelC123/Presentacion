@@ -33,8 +33,17 @@ public class Menu {
 
     public void modificarOpcion(short idOpcion) {}
 
-    public void eliminarOpcion(OpcionMenu opcion) {
-		opciones.remove(opcion);
+    public void eliminarOpcion(short idOpcion) {
+		opciones.remove(buscarOpcion(idOpcion));
+    }
+
+    public OpcionMenu buscarOpcion(short idOpcion){
+		for(OpcionMenu opcion : opciones){
+			if(opcion.getIdOpcion()==idOpcion){
+				return opcion;
+			}
+		}
+		return null;
     }
 
     private String generarBorde(int longitud){
