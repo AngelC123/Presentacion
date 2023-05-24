@@ -14,12 +14,12 @@ public class Main{
         menu.agregarOpcion(opcion5);
         menu.desplegar();
 
-        System.out.println();
-        menu.eliminarOpcion(opcion4);
+        System.out.println();        
+		menu.eliminarOpcion((short)2);
         menu.desplegar();
 
         System.out.println();
-        menu.eliminarOpcion(opcion1);
+        menu.eliminarOpcion((short)4);
         menu.desplegar();
 	}
 }
