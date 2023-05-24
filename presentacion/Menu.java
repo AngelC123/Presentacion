@@ -27,42 +27,44 @@ public class Menu {
         this.disenoBorde = disenoBorde;
     }
 
-    public void agregarOpcion(OpcionMenu opcion) {
-        opciones.add(opcion);
+    public void agregarOpcion(short idOpcion, String texto, String color) {
+        opciones.add(new OpcionMenu(idOpcion, texto, color));
     }
 
     public void modificarOpcion(short idOpcion) {}
 
     public void eliminarOpcion(short idOpcion) {
-		opciones.remove(buscarOpcion(idOpcion));
+		  opciones.remove(buscarOpcion(idOpcion));
     }
 
     public OpcionMenu buscarOpcion(short idOpcion){
-		for(OpcionMenu opcion : opciones){
-			if(opcion.getIdOpcion()==idOpcion){
-				return opcion;
-			}
-		}
-		return null;
+      for(OpcionMenu opcion : opciones){
+        if(opcion.getIdOpcion()==idOpcion){
+          return opcion;
+        }
+      }
+      return null;
     }
 
     private String generarBorde(int longitud){
     	StringBuilder borde = new StringBuilder();
-		for(int i=0; i<longitud; i++){
-			borde.append(disenoBorde);
-		}
-		return borde.toString();
+      for(int i=0; i<longitud; i++){
+        borde.append(disenoBorde);
+      }
+      return borde.toString();
     }
 
     public void desplegar(){
-		String bordeSuperior = generarBorde(10)+tituloMenu+generarBorde(10);
-		System.out.println(bordeSuperior);
+      String bordeSuperior = generarBorde(10)+tituloMenu+generarBorde(10);
+      System.out.println(bordeSuperior);
 
-		for(OpcionMenu opcion : opciones){
-			System.out.println(opcion.getIdOpcion()+") -> "+opcion.getTexto());
-		}		
+      for(OpcionMenu opcion : opciones){
+        System.out.println(opcion.getColor());
+        System.out.println(opcion.getIdOpcion()+") -> "+opcion.getTexto());
+        System.out.println(Colores.defecto);
+      }		
 
-		String bordeInferior = generarBorde(bordeSuperior.length());
-		System.out.println(bordeInferior);
+      String bordeInferior = generarBorde(bordeSuperior.length());
+      System.out.println(bordeInferior);
     }
 }
